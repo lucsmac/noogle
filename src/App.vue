@@ -11,6 +11,9 @@ export default {
   name: "app",
   components: {
     TheHeader
+  },
+  created() {
+    document.title = "Noogle";
   }
 };
 </script>
