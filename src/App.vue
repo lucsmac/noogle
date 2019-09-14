@@ -29,7 +29,13 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  min-width: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .main {

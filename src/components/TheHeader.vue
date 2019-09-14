@@ -35,8 +35,8 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 1200px;
+  align-self: center;
   &__nav {
     height: 40px;
     display: flex;
