@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheHeader />
-    <SearchArea />
+    <SearchArea class="main" />
     <TheFooter />
   </div>
 </template>
