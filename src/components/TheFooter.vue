@@ -33,11 +33,12 @@ export default {
 .footer {
   display: block;
   &__line {
-    padding: 0 25px;
+    box-sizing: border-box;
+    padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 32px;
+    height: 42px;
     background: #f2f2f2;
     border-top: 1px solid rgb(230, 230, 230);
   }
@@ -46,7 +47,7 @@ export default {
 .language {
   display: flex;
   justify-content: flex-start;
-  padding: 0 25px;
+  padding: 0 20px;
   cursor: pointer;
   &__item {
     text-decoration: none;
@@ -75,7 +76,7 @@ export default {
     font-weight: 400;
     font-size: 13px;
     color: rgb(102, 102, 102);
-    margin: 0 10px;
+    margin: 0 15px;
   }
 }
 </style>

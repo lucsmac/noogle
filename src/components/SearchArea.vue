@@ -10,10 +10,9 @@
     </h1>
     <span class="search__subtitle">Não somos o Google</span>
     <input class="search__input" type="text" v-model="toSearch" />
-    <p>{{toSearch}}</p>
     <div class="search__btns btns">
       <button class="btns__btn">
-        Pesquisar
+        Pesquisa Noogle
         <br />
         <span class="btns__btn--shorter">(o único mais rápido que o Google)</span>
       </button>
@@ -56,7 +55,7 @@ export default {
   }
   &__input {
     width: 560px;
-    height: 38px;
+    height: 42px;
     border-radius: 19px;
     border: 1px solid #e4e4e4;
     margin: 20px 0 0 0;
@@ -68,6 +67,8 @@ export default {
   }
   &__btns {
     display: flex;
+    margin: 20px;
+    height: 73px;
   }
 
   .title {
@@ -97,12 +98,14 @@ export default {
     &__btn {
       box-sizing: border-box;
       width: 180px;
+      height: 34px;
       background: #f1f1f1;
       border-radius: 3px;
       border: none;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 400;
-      font-size: 13px;
+      font-size: 14px;
+      line-height: 11px;
       color: rgb(102, 102, 102);
       padding: 7px 10px;
       margin: 0 7px;

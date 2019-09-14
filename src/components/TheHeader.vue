@@ -34,13 +34,15 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  height: 80px;
+  height: 60px;
   width: 1200px;
   align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   &__nav {
     height: 40px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
   }
 }
@@ -54,8 +56,12 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 13px;
-    color: rgb(102, 102, 102);
+    color: rgb(72, 72, 72);
     margin: 0 10px;
+    &:hover {
+      text-decoration: underline;
+      color: rgb(102, 102, 102);
+    }
   }
 }
 
