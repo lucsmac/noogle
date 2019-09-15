@@ -71,10 +71,14 @@ export default {
   &__field {
     box-sizing: border-box;
     width: 560px;
-    height: 42px;
-    border-radius: 19px;
+    height: 45px;
+    border-radius: 25px;
     border: 1px solid #e4e4e4;
     margin: 20px 0 0 0;
+    transition: box-shadow 0.1s ease;
+    &:hover {
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    }
   }
   &__input {
     font-family: Arial, Helvetica, sans-serif;
@@ -120,6 +124,7 @@ export default {
       flex: 1;
       border: none;
       font-family: Arial, Helvetica, sans-serif;
+      padding: 0 10px;
       &:focus {
         outline: none;
       }
@@ -158,7 +163,7 @@ export default {
       height: 34px;
       background: #f1f1f1;
       border-radius: 3px;
-      border: none;
+      border: 1px solid #f2f2f2;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 400;
       font-size: 14px;
@@ -170,7 +175,7 @@ export default {
         font-size: 8px;
       }
       &:hover {
-        border: 1px solid rgb(230, 230, 230);
+        border: 1px solid #c6c6c6;
       }
     }
   }
