@@ -9,7 +9,22 @@
       <span class="title__letter--6">e</span>
     </h1>
     <span class="search__subtitle">Não somos o Google</span>
-    <input class="search__input" type="text" v-model="toSearch" />
+    <div class="search__field field">
+      <svg
+        class="field__search-icon search-icon"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          class="search-icon__content"
+          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        />
+      </svg>
+      <input class="field__input" type="text" v-model="toSearch" />
+      <div class="field__keyboard"></div>
+      <div class="field__google-mic"></div>
+    </div>
     <div class="search__btns btns">
       <button class="btns__btn">
         Pesquisa Noogle
@@ -53,13 +68,15 @@ export default {
     margin: 5px;
     opacity: 0.5;
   }
-  &__input {
+  &__field {
+    box-sizing: border-box;
     width: 560px;
     height: 42px;
     border-radius: 19px;
     border: 1px solid #e4e4e4;
     margin: 20px 0 0 0;
-    padding: 0 15px;
+  }
+  &__input {
     font-family: Arial, Helvetica, sans-serif;
     &:focus {
       outline: none;
@@ -91,6 +108,46 @@ export default {
       &--6 {
         color: #1bb808;
       }
+    }
+  }
+
+  .field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    &__input {
+      flex: 1;
+      border: none;
+      font-family: Arial, Helvetica, sans-serif;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__search-icon {
+      width: 20px;
+      height: 20px;
+    }
+    &__google-mic {
+      background: url("http://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png")
+        no-repeat center;
+      background-size: cover;
+      width: 15px;
+      height: 22px;
+    }
+    &__keyboard {
+      background: url("//www.gstatic.com/inputtools/images/tia.png") no-repeat
+        center;
+      background-size: cover;
+      width: 21px;
+      height: 12px;
+      margin-right: 10px;
+    }
+  }
+
+  .search-icon {
+    &__content {
+      fill: #9aa0a6;
     }
   }
 
