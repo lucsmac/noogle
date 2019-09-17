@@ -26,12 +26,12 @@
       <div class="field__google-mic"></div>
     </div>
     <div class="search__btns btns">
-      <button class="btns__btn">
+      <a :href="theSearch" target="_blank" class="btns__btn">
         Pesquisa Noogle
         <br />
         <span class="btns__btn--shorter">(o único mais rápido que o Google)</span>
-      </button>
-      <button class="btns__btn">Estou com sorte?</button>
+      </a>
+      <a :href="sortLink" target="_blank" class="btns__btn">Estou com sorte?</a>
     </div>
   </section>
 </template>
@@ -41,8 +41,17 @@ export default {
   name: "SearchArea",
   data() {
     return {
-      toSearch: null
+      toSearch: null,
+      sortLink: "https://www.sorteonline.com.br/"
     };
+  },
+  computed: {
+    theSearch() {
+      return this.toSearch
+        ? "https://www.google.com/search?sxsrf=ACYBGNQW7eIVnI1VXWA_fW-m2g82oi2uJw%3A1568589863860&ei=J8h-Xf-HNOq55OUPi7ingAc&q=" +
+            this.toSearch.replace(" ", "+")
+        : "";
+    }
   }
 };
 </script>
@@ -125,6 +134,7 @@ export default {
       border: none;
       font-family: Arial, Helvetica, sans-serif;
       padding: 0 10px;
+      color: rgb(80, 80, 80);
       &:focus {
         outline: none;
       }
@@ -158,6 +168,8 @@ export default {
 
   .btns {
     &__btn {
+      text-align: center;
+      text-decoration: none;
       box-sizing: border-box;
       width: 180px;
       height: 34px;
