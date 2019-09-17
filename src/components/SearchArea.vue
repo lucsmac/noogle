@@ -1,12 +1,11 @@
 <template>
   <section class="search">
     <h1 class="search__title title">
-      <span class="title__letter--1">N</span>
-      <span class="title__letter--2">o</span>
-      <span class="title__letter--3">o</span>
-      <span class="title__letter--4">g</span>
-      <span class="title__letter--5">l</span>
-      <span class="title__letter--6">e</span>
+      <span
+        v-for="(letter, key) in noogleArray"
+        :key="key"
+        :class="`title__letter--${key + 1}`"
+      >{{letter}}</span>
     </h1>
     <span class="search__subtitle">Não somos o Google</span>
     <div class="search__field field">
@@ -41,11 +40,15 @@ export default {
   name: "SearchArea",
   data() {
     return {
+      noogle: "Noogle",
       toSearch: null,
       sortLink: "https://www.sorteonline.com.br/"
     };
   },
   computed: {
+    noogleArray() {
+      return this.noogle.split("");
+    },
     theSearch() {
       return this.toSearch
         ? "https://www.google.com/search?sxsrf=ACYBGNQW7eIVnI1VXWA_fW-m2g82oi2uJw%3A1568589863860&ei=J8h-Xf-HNOq55OUPi7ingAc&q=" +

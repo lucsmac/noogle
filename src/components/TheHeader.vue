@@ -4,15 +4,7 @@
       <a class="nav__link" :href="email" target="_blank">Email</a>
       <a class="nav__link" :href="instagram" target="_blank">Imagens</a>
       <a :href="linkedin" target="_blank" class="nav__blocks blocks">
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
-        <span class="blocks__square"></span>
+        <span v-for="i in 9" :key="i" class="blocks__square"></span>
       </a>
       <a class="nav__link nav__link--github" :href="github" target="_blank">
         <img src="@/components/assets/img/github.png" alt="Github" />
