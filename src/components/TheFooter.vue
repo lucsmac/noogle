@@ -16,7 +16,11 @@
           <a href="#" class="link__a">No Google</a>
         </li>
         <li>
-          <a href="#" class="link__a">Veja como funciona a monopolização no mundo digital</a>
+          <a
+            :href="monopolization"
+            target="_blank"
+            class="link__a"
+          >Veja como funciona a monopolização no mundo digital</a>
         </li>
       </ul>
     </div>
@@ -25,7 +29,13 @@
 
 <script>
 export default {
-  name: "TheFooter"
+  name: "TheFooter",
+  data() {
+    return {
+      monopolization:
+        "https://exame.abril.com.br/tecnologia/google-e-acusado-de-monopolizar-ilegalmente-mercado-de-pesquisa-na-internet/"
+    };
+  }
 };
 </script>
 

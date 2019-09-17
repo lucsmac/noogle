@@ -1,17 +1,9 @@
 <template>
   <header class="header">
     <nav class="header__nav nav">
-      <a
-        class="nav__link"
-        href="https://www.google.com/search?sxsrf=ACYBGNT5sjtBkMdpSitrYEcJaTNAVs70JA%3A1568408250851&ei=ugJ8XcvRM7Gx5OUP2rSAwAc&q=email&oq=email&gs_l=psy-ab.3..35i39j0i67j0i131i67j0i67l2j0j0i67l2j0l2.2566.2566..3214...0.1..0.167.167.0j1......0....1..gws-wiz.......0i71.X1tYYAO9Eh8&ved=0ahUKEwjLlp6F2M7kAhWxGLkGHVoaAHgQ4dUDCAs&uact=5"
-        target="_blank"
-      >Email</a>
-      <a
-        class="nav__link"
-        href="https://www.google.com.br/search?hl=pt-BR&authuser=0&biw=1366&bih=657&tbm=isch&sxsrf=ACYBGNTq7tlBNPY3yw_hvxUUuntNEWKjoA%3A1568408296648&sa=1&ei=6AJ8XZWeJ87B5OUPvZyLqA8&q=google&oq=google&gs_l=img.3..35i39j0i67j0l4j0i67j0l2j0i67.924.1619..1805...0.0..0.155.868.0j6......0....1..gws-wiz-img.b6wSOsfmuXw&ved=0ahUKEwiVsomb2M7kAhXOILkGHT3OAvUQ4dUDCAc&uact=5"
-        target="_blank"
-      >Imagens</a>
-      <div class="nav__blocks blocks">
+      <a class="nav__link" :href="email" target="_blank">Email</a>
+      <a class="nav__link" :href="instagram" target="_blank">Imagens</a>
+      <a :href="linkedin" target="_blank" class="nav__blocks blocks">
         <span class="blocks__square"></span>
         <span class="blocks__square"></span>
         <span class="blocks__square"></span>
@@ -21,14 +13,25 @@
         <span class="blocks__square"></span>
         <span class="blocks__square"></span>
         <span class="blocks__square"></span>
-      </div>
+      </a>
+      <a class="nav__link nav__link--github" :href="github" target="_blank">
+        <img src="@/components/assets/img/github.png" alt="Github" />
+      </a>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-  name: "TheHeader"
+  name: "TheHeader",
+  data() {
+    return {
+      email: "mailto:lucas.macedo0821@gmail.com",
+      linkedin: "https://www.linkedin.com/in/lucsmac/",
+      instagram: "https://www.instagram.com/lcs_macedo/",
+      github: "https://github.com/lucsmac/noogle"
+    };
+  }
 };
 </script>
 
@@ -57,10 +60,16 @@ export default {
     font-weight: 400;
     font-size: 13px;
     color: rgb(72, 72, 72);
-    margin: 0 10px;
+    margin: 0 8px;
     &:hover {
       text-decoration: underline;
       color: rgb(102, 102, 102);
+    }
+    &--github {
+      opacity: 0.85;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -73,6 +82,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 3px;
+  margin: 0 10px;
   cursor: pointer;
   &:hover {
     #{ $self }__square {
@@ -82,8 +92,8 @@ export default {
   &__square {
     display: flex;
     justify-content: space-between;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background: #7b7b7b;
   }
 }
