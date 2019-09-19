@@ -30,8 +30,8 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 60px;
-  width: 1200px;
-  align-self: center;
+  padding: 0 7%;
+  align-self: flex-end;
   display: flex;
   align-items: center;
   justify-content: flex-end;

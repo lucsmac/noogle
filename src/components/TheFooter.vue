@@ -9,13 +9,13 @@
         <li class="nav__link link">
           <a href="#" class="link__a">Não</a>
         </li>
-        <li>
+        <li class="nav__link link">
           <a href="#" class="link__a">Pesquise</a>
         </li>
-        <li>
+        <li class="nav__link link">
           <a href="#" class="link__a">No Google</a>
         </li>
-        <li>
+        <li class="nav__link link">
           <a
             :href="monopolization"
             target="_blank"
@@ -44,11 +44,10 @@ export default {
   display: block;
   &__line {
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 12px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 42px;
     background: #f2f2f2;
     border-top: 1px solid rgb(230, 230, 230);
   }
@@ -57,7 +56,6 @@ export default {
 .language {
   display: flex;
   justify-content: flex-start;
-  padding: 0 20px;
   cursor: pointer;
   &__item {
     text-decoration: none;
@@ -65,7 +63,7 @@ export default {
     font-weight: 400;
     font-size: 13px;
     color: rgb(102, 102, 102);
-    margin: 0 10px;
+    margin-right: 15px;
   }
 }
 
@@ -75,18 +73,28 @@ export default {
   margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
 }
 
 .link {
-  margin: 0 15px 0 0;
+  padding: 0 15px 0 0;
   &__a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: rgb(102, 102, 102);
-    margin: 0 15px;
+    padding: 0 15px 0 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .link {
+    margin: 5px 0;
+  }
+  .link__a {
+    padding: 0;
   }
 }
 </style>
