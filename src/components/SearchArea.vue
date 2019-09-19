@@ -61,7 +61,8 @@ export default {
 
 <style lang="scss" scoped>
 .search {
-  width: 900px;
+  box-sizing: border-box;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -193,6 +194,20 @@ export default {
         border: 1px solid #c6c6c6;
       }
     }
+  }
+}
+
+@media (max-width: 580px) {
+  .search {
+    max-width: 100%;
+    width: 100%;
+    .field__google-mic,
+    .field__keyboard {
+      display: none;
+    }
+  }
+  .search__field {
+    width: calc(100% - 30px);
   }
 }
 </style>
