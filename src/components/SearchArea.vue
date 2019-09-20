@@ -107,7 +107,7 @@ export default {
 
   @media (max-width: 720px) {
     .search__title {
-      font-size: 40px;
+      font-size: 50px;
     }
   }
 
