@@ -105,6 +105,12 @@ export default {
     height: 73px;
   }
 
+  @media (max-width: 720px) {
+    .search__title {
+      font-size: 40px;
+    }
+  }
+
   .title {
     &__letter {
       &--1 {
@@ -172,6 +178,9 @@ export default {
 
   .btns {
     &__btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
       text-decoration: none;
       box-sizing: border-box;
@@ -204,6 +213,9 @@ export default {
     .field__google-mic,
     .field__keyboard {
       display: none;
+    }
+    .btns__btn {
+      width: 150px;
     }
   }
   .search__field {
