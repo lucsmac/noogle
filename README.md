@@ -1,35 +1,25 @@
-# noogle
+# Noogle
 
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
+## Sobre
 
 ```
-npm run serve
+O Noogle é um manifesto anti Google. 
+```
+```
+Ele foi criado para que a sociedade se liberte do monopólio digital criado por essa empresa. 
+```
+```
+Nunca mais pesquise no Google, pesquise no Noogle.
 ```
 
-### Compiles and minifies for production
+## Obs:
 
 ```
-npm run build
+O Noogle é um projeto criado apenas por fins de aprendizado. 
 ```
-
-### Run your tests
-
 ```
-npm run test
+Em sua construção foi utilizado Vue.js para criar a aplicação no lado do cliente e Github para realizar o versionamento. 
 ```
-
-### Lints and fixes files
-
 ```
-npm run lint
+Por fins estratégicos, ele foi projetado para não precisar de uma estrutura de armazenamento de dados.
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
